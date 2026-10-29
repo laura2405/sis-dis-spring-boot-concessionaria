@@ -98,7 +98,7 @@ public void setPecas(List<Peca> pecas) {
 	public void setPlataforma(Plataforma plataforma) {
 		this.plataforma = plataforma;
 	}
-	public List<Peca> getPecas() {
+	 {
     return pecas;
 }
 
