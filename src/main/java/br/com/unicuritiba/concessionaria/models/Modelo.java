@@ -7,6 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import java.util.List;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Modelo {
@@ -29,6 +31,17 @@ public class Modelo {
 	private String motor;
 	
 	private String ano;
+
+	@ManyToMany
+    private List<Peca> pecas;
+
+	public List<Peca> getPecas() {
+    return pecas;
+}
+
+public void setPecas(List<Peca> pecas) {
+    this.pecas = pecas;
+}
 	
 	public long getId() {
 		return id;
@@ -85,4 +98,11 @@ public class Modelo {
 	public void setPlataforma(Plataforma plataforma) {
 		this.plataforma = plataforma;
 	}
+	public List<Peca> getPecas() {
+    return pecas;
+}
+
+public void setPecas(List<Peca> pecas) {
+    this.pecas = pecas;
+}
 }
